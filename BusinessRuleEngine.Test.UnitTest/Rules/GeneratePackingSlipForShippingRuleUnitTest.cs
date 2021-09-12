@@ -27,7 +27,7 @@ namespace BusinessRuleEngine.Test.UnitTest.Rules
                Id=Guid.NewGuid(), ProductType = ProductType.Physical } };
 
             var packingSlipService = new Mock<IPackingSlipService>();
-            packingSlipService.Setup(s=>s.GeneratePackingSlip(order)).Returns(true);
+            packingSlipService.Setup(s=>s.GeneratePackingSlip(It.IsAny<Order>())).Returns(true);
             
             var sut = new GeneratePackingSlipRule(packingSlipService.Object);
             sut.Execute(order);

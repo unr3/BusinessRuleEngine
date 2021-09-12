@@ -20,7 +20,7 @@ namespace BusinessRuleEngine.Test.UnitTest.Rules
             var order = new Order() { Id=Guid.NewGuid(), Product=new Product() { Id=Guid.NewGuid(), ProductType=ProductType.Physical, Category = new Category() { Id=Guid.NewGuid(),Name="Book" } } };
 
             var mockPackingSlipService =new  Mock<IPackingSlipService>();
-            mockPackingSlipService.Setup(s => s.DuplicatePackingSlip(order)).Returns(true);
+            mockPackingSlipService.Setup(s => s.DuplicatePackingSlip(It.IsAny<Order>())).Returns(true);
 
             var sut = new DuplicatePackingSlipRule(mockPackingSlipService.Object);
             sut.Execute(order);

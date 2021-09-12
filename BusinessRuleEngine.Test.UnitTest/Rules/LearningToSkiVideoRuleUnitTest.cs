@@ -20,7 +20,7 @@ namespace BusinessRuleEngine.Test.UnitTest.Rules
             var order = new Order() { Id = Guid.NewGuid(), User = new User() { Id = Guid.NewGuid() }, Product = new Product() { Id = Guid.NewGuid(), ProductType = ProductType.Physical,Name= "LearningToSki", ProductBundle=new ProductBundle() { Id= Guid.NewGuid(), Name="Free Aid" }, Category = new Category() { Id = Guid.NewGuid(), Name = "Video" } } };
 
             var mockPackingService = new Mock<IPackingSlipService>();
-            mockPackingService.Setup(s => s.AddToPackingSlip(order.Product.ProductBundle.Id)).Returns(true);
+            mockPackingService.Setup(s => s.AddToPackingSlip(It.IsAny<Guid>())).Returns(true);
 
             var sut = new LearningToSkiVideoRule(mockPackingService.Object);
             sut.Execute(order);

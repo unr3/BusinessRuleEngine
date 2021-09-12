@@ -20,7 +20,7 @@ namespace BusinessRuleEngine.Test.UnitTest.Rules
             var order = new Order() { Id = Guid.NewGuid(), User = new User() { Id = Guid.NewGuid(),Email="test@email.com" }, Product = new Product() { Id = Guid.NewGuid(), ProductType = ProductType.Physical, Category = new Category() { Id = Guid.NewGuid(), Name = "Membership Activation" } } };
 
             var mockNotificationService = new Mock<INotificationService>();
-            mockNotificationService.Setup(s => s.Notify(order.User.Email)).Returns(true);
+            mockNotificationService.Setup(s => s.Notify(It.IsAny<string>())).Returns(true);
 
             var sut = new EmailNotificationForMembershipRule(mockNotificationService.Object);
             sut.Execute(order);

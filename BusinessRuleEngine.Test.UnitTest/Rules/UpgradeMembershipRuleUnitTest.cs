@@ -22,7 +22,7 @@ namespace BusinessRuleEngine.Test.UnitTest.Rules
             var order = new Order() { Id = Guid.NewGuid(), User = new User() { Id = Guid.NewGuid() }, Product = new Product() { Id = Guid.NewGuid(), ProductType = ProductType.Physical, Category = new Category() { Id = Guid.NewGuid(), Name = "Membership Upgrade" } } };
 
             var mockMembershipService = new Mock<IMembershipService>();
-            mockMembershipService.Setup(s => s.UpgradeMembership(order.User.Id)).Returns(true);
+            mockMembershipService.Setup(s => s.UpgradeMembership(It.IsAny<Guid>())).Returns(true);
 
             var sut = new UpgradeMembershipRule(mockMembershipService.Object);
             sut.Execute(order);
