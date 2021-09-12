@@ -1,7 +1,7 @@
 ﻿using BusinessRuleEngine.OrderRuleDomain.Services;
 using System;
 
-namespace BusinessRuleEngine.Test.UnitTest.Services
+namespace BusinessRuleEngine.OrderBusinessRules.Services
 {
     public class EmailNotificationService : INotificationService
     {

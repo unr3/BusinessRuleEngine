@@ -9,8 +9,4 @@
     <ProjectReference Include="..\BusinessRuleEngine.OrderRuleDomain\BusinessRuleEngine.OrderRuleDomain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 </Project>
