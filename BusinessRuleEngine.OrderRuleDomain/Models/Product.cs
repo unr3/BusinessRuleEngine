@@ -10,5 +10,7 @@ namespace BusinessRuleEngine.OrderRuleDomain.Models
         public ProductType ProductType { get; init; }
         public Category Category { get; init; }
         public ProductBundle ProductBundle { get; init; }
+        public double Price { get; init; }
+        public double CommissionRate { get; init; }
     }
 }
