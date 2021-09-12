@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\BusinessRuleEngine.OrderBusinessRules\BusinessRuleEngine.OrderBusinessRules.csproj" />
     <ProjectReference Include="..\BusinessRuleEngine.OrderRuleDomain\BusinessRuleEngine.OrderRuleDomain.csproj" />
   </ItemGroup>
