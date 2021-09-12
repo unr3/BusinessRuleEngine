@@ -15,7 +15,7 @@ namespace BusinessRuleEngine.Test.UnitTest.Rules
    public class LearningToSkiVideoRuleUnitTest
     {
         [Test]
-        public void Should_IsSuccessfulTrue_When_OrderIsMembership()
+        public void Should_IsSuccessfulTrue_When_VideoIdLearningToSki()
         {
             var order = new Order() { Id = Guid.NewGuid(), User = new User() { Id = Guid.NewGuid() }, Product = new Product() { Id = Guid.NewGuid(), ProductType = ProductType.Physical,Name= "LearningToSki", ProductBundle=new ProductBundle() { Id= Guid.NewGuid(), Name="Free Aid" }, Category = new Category() { Id = Guid.NewGuid(), Name = "Video" } } };
 
