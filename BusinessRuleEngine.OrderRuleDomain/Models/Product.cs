@@ -1,6 +1,7 @@
-﻿using System;
+﻿using BusinessRuleEngine.OrderRuleDomain.Enums;
+using System;
 
-namespace BusinessRuleEngine.Test.UnitTest.Rules
+namespace BusinessRuleEngine.OrderRuleDomain.Models
 {
     public record Product
     {

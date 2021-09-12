@@ -1,6 +1,9 @@
-﻿using Moq;
+﻿using BusinessRuleEngine.OrderRuleDomain.Enums;
+using BusinessRuleEngine.OrderRuleDomain.Models;
+using BusinessRuleEngine.OrderRuleDomain.Services;
 
-namespace BusinessRuleEngine.Test.UnitTest.Rules
+
+namespace BusinessRuleEngine.OrderBusinessRules.Rules
 {
     public class GeneratePackingSlipRule
     {
