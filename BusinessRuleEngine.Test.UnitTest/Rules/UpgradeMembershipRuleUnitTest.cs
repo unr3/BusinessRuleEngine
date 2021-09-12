@@ -14,8 +14,10 @@ namespace BusinessRuleEngine.Test.UnitTest.Rules
 {
    public class UpgradeMembershipRuleUnitTest
     {
+       
+
         [Test]
-        public void Should_IsSuccessfulTrue_When_OrderIsMembership()
+        public void Should_IsSuccessfulTrue_When_OrderIsUpgradeMembership()
         {
             var order = new Order() { Id = Guid.NewGuid(), User = new User() { Id = Guid.NewGuid() }, Product = new Product() { Id = Guid.NewGuid(), ProductType = ProductType.Physical, Category = new Category() { Id = Guid.NewGuid(), Name = "Membership Upgrade" } } };
 
