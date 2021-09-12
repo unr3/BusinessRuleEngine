@@ -8,5 +8,7 @@ namespace BusinessRuleEngine.OrderRuleDomain.Services
         bool GeneratePackingSlip(Order order);
 
         bool DuplicatePackingSlip(Order order);
+
+        bool AddToPackingSlip(Guid bundleProductId);
     }
 }
