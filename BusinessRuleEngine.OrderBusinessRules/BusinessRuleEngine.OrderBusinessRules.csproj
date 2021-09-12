@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BusinessRuleEngine.Abstraction\BusinessRuleEngine.Abstraction.csproj" />
     <ProjectReference Include="..\BusinessRuleEngine.OrderRuleDomain\BusinessRuleEngine.OrderRuleDomain.csproj" />
   </ItemGroup>
 
