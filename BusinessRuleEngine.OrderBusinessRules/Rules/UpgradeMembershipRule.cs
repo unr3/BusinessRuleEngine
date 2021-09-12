@@ -15,6 +15,8 @@ namespace BusinessRuleEngine.OrderBusinessRules.Rules
 
         public UpgradeMembershipRule(IMembershipService membershipService)
         {
+            if (membershipService == null)
+                throw new ArgumentNullException($"{nameof(IMembershipService)} is empty");
             _membershipService = membershipService;
         }
 

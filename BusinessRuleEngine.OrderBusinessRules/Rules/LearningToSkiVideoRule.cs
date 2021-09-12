@@ -15,6 +15,9 @@ namespace BusinessRuleEngine.OrderBusinessRules.Rules
 
         public LearningToSkiVideoRule(IPackingSlipService packingSlipService)
         {
+            if (packingSlipService == null)
+                throw new ArgumentNullException($"{nameof(IPackingSlipService)} is empty");
+
             _packingSlipService = packingSlipService;
         }
 

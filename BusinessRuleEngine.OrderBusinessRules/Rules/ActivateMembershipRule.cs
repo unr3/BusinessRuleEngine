@@ -15,6 +15,8 @@ namespace BusinessRuleEngine.OrderBusinessRules.Rules
 
         public ActivateMembershipRule(IMembershipService membershipService)
         {
+            if (membershipService == null)
+                throw new ArgumentNullException($"{nameof(IMembershipService)} is empty");
             _membershipService = membershipService;
         }
         public override Func<Order, bool> Condition => (Order o) => o.Product.Category.Name== "Membership Activation";

@@ -16,6 +16,8 @@ namespace BusinessRuleEngine.OrderBusinessRules.Rules
 
         public GenerateCommissionRule(ICommissionService commissionService)
         {
+            if (commissionService == null)
+                throw new ArgumentNullException($"{nameof(ICommissionService)} is empty");
             _commissionService = commissionService;
         }
 

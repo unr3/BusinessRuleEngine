@@ -20,6 +20,8 @@ namespace BusinessRuleEngine.OrderBusinessRules.Rules
 
         public GeneratePackingSlipRule(IPackingSlipService packingSlipService)
         {
+            if (packingSlipService == null)
+                throw new ArgumentNullException($"{nameof(IPackingSlipService)} is empty");
             _packingSlipService = packingSlipService;
         }
 

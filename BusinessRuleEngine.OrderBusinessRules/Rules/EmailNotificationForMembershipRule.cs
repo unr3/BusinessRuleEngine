@@ -15,6 +15,8 @@ namespace BusinessRuleEngine.OrderBusinessRules.Rules
 
         public EmailNotificationForMembershipRule(INotificationService notificationService)
         {
+            if (notificationService == null)
+                throw new ArgumentNullException($"{nameof(INotificationService)} is empty");
             _notificationService = notificationService;
         }
         public override Func<Order, bool> Condition => (Order o)=> o.Product.Category.Name== "Membership Activation" || o.Product.Category.Name== "Membership Upgrade";
