@@ -6,7 +6,8 @@ namespace BusinessRuleEngine.OrderRuleDomain.Models
         {
             public Guid Id { get; init; }
             public Product Product { get; init; }
-           
-        }
+
+
+    }
     
 }
