@@ -9,5 +9,6 @@ namespace BusinessRuleEngine.OrderRuleDomain.Services
     public interface IMembershipService
     {
         bool ActivateMembership(Guid userId);
+        bool UpgradeMembership(Guid userId);
     }
 }
