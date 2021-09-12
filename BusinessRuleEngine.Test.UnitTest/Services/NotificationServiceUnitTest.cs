@@ -1,5 +1,7 @@
 ﻿using BusinessRuleEngine.OrderBusinessRules.Services;
 using BusinessRuleEngine.OrderRuleDomain.Services;
+using Microsoft.Extensions.Configuration;
+using Moq;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -16,6 +18,20 @@ namespace BusinessRuleEngine.Test.UnitTest.Services
         [SetUp]
         public void Setup()
         {
+            /*
+             If we want to mock IConfıguration/IConfigurationSection for our services
+            
+            var mockConfiguration = new Mock<IConfiguration>();
+            
+            var mockConfigurationSection = new Mock<IConfigurationSection>();
+
+            mockConfigurationSection.Setup(s=>s.Value).Returns("https://emailnotificationproviderurl");
+
+            mockConfiguration.Setup(s=>s.GetSection("sectionname")).Returns(mockConfigurationSection.Object);
+            _sut = new EmailNotificationService(mockConfiguration.Object);
+
+             */
+
             _sut = new EmailNotificationService();
         }
         [Test]
