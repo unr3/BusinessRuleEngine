@@ -9,6 +9,6 @@ namespace BusinessRuleEngine.Abstraction
    public interface IRuleEngine<T> where T:class
     {
         IEnumerable<BusinessRule<T>> Rules { get; }
-        void Apply();
+        void Apply(T ruleObject);
     }
 }
