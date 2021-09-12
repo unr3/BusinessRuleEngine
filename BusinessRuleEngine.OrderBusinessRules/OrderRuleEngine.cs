@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BusinessRuleEngine.Test.UnitTest
+namespace BusinessRuleEngine.OrderBusinessRules
 {
     public class OrderRuleEngine : IRuleEngine<Order>
     {
