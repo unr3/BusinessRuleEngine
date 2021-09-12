@@ -10,14 +10,6 @@ namespace BusinessRuleEngine.OrderBusinessRules.Rules
     {
         private IPackingSlipService _packingSlipService;
 
-        
-       
-        public override Func<Order, bool> Condition => (Order o)=>o.Product.ProductType==ProductType.Physical;
-
-        public override Predicate<Order> Predicate => (Order o)=>_packingSlipService.GeneratePackingSlip(o);
-
-        
-
         public GeneratePackingSlipRule(IPackingSlipService packingSlipService)
         {
             if (packingSlipService == null)
@@ -25,6 +17,8 @@ namespace BusinessRuleEngine.OrderBusinessRules.Rules
             _packingSlipService = packingSlipService;
         }
 
-        
+        public override Func<Order, bool> Condition => (Order o)=>o.Product.ProductType==ProductType.Physical;
+
+        public override Predicate<Order> Predicate => (Order o)=>_packingSlipService.GeneratePackingSlip(o);
     }
 }
